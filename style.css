@@ -1,0 +1,68 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: black;
+    color: white;
+    font-family: 'Gugi', cursive;
+}
+.slider{
+    width: 100%;
+    height: 100vh;
+    text-transform: lowercase;
+    position: relative;
+}
+.rgbKineticSlider{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+canvas{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+}
+nav a {
+    text-decoration: none;
+    position: absolute;
+    top: 50vh;
+    z-index: 1;
+    padding: 20px;
+    transition: 0.3s;
+    background: black;
+    color: white;
+}
+nav a:hover,
+nav a:focus {
+    color: white;
+    outline: none;
+}
+nav span {
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    display: block;
+    margin-top: 3px;
+    -moz-transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+    transition: width 0.3s ease;
+}
+nav a:hover span {
+    width: 100%;
+}
+nav a.next{
+    right:10vw;
+}
+nav a.prev{
+    left: 10vw;
+}
+@media screen and (max-width: 53em) {
+    nav a {
+        top : auto;
+        bottom : 3rem;
+    }
+}
